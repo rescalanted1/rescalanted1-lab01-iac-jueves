@@ -7,6 +7,6 @@ terraform {
   }
 }
 
-provider "docker" {
-  # Configuration options
+resource "docker_network" "app_network" {
+  name = "net-${terraform.workspace}"
 }
